@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Battleship</title>
+  <style>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(10, 30px);
+      grid-template-rows: repeat(10, 30px);
+      gap: 2px;
+      margin: 10px;
+    }
+    .cell {
+      width: 30px;
+      height: 30px;
+      background: #ccc;
+      border: 1px solid #999;
+    }
+    .cell.ship {
+      background: #444;
+    }
+    .cell.hit {
+      background: red;
+    }
+    .cell.miss {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Battleship</h1>
+  <div id="message"></div>
+  <h2>Your Board</h2>
+  <div id="player-board" class="board"></div>
+  <h2>Computer Board</h2>
+  <div id="computer-board" class="board"></div>
+
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>
